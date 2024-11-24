@@ -1,0 +1,70 @@
+body {
+    margin: 0;
+    font-family: "Inter", serif;
+}
+
+#main-container {
+    text-align: center;
+}
+
+#top-screen {
+    background: #6943FF;
+    padding: 15px;
+}
+
+h1 {
+    margin-top: 0;
+    padding-top: 15px;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+#number-to-convert {
+    font-size: 30px;
+    margin: 0 auto 10px auto;
+    color: #ffffff;
+    font-style: bold;
+    border: 1px solid #ffffff;
+    min-width: 80px;
+    max-width: 200px;
+    align-content: center;
+    font-weight: 800;
+}
+
+#convert-btn {
+    margin-bottom: 15px;
+    margin-top: 10px;
+    background: #ffffff;
+    color: #3D3D3D;
+    border: none;
+    border-radius: 3px;
+    padding: 5px 15px;
+    font-weight: 400;
+}
+
+#results-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+    background: #F4F4F4;
+    height: 100vh;
+}
+
+.results {
+    margin: 10px 0;
+    width: 80%;
+    margin: 8px auto;
+    border-radius: 4px;
+    background: #ffffff;
+}
+
+.results h2 {
+    font-size: 16px; 
+    font-weight: 600;
+
+}
+
+.results p {
+    font-size: 14px;
+    font-weight: 400;
+}
