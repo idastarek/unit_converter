@@ -58,6 +58,7 @@ input[type=number]{
     border-radius: 3px;
     padding: 5px 15px;
     font-weight: 400;
+    padding: 8px 8px;
 }
 
 #results-container {
