@@ -1,3 +1,12 @@
+:root {
+    --purple: #6943FF;
+    --pink: #DE45AB;
+    --grey: #F4F4F4;
+    --white: #ffffff;
+    --black: #3D3D3D;
+}
+
+
 body {
     margin: 0;
     font-family: "Inter", serif;
@@ -12,14 +21,14 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background: #6943FF;
+    background: var(--purple);
     padding: 15px;
 }
 
 h1 {
     margin-top: 0;
     padding-top: 15px;
-    color: #ffffff;
+    color: var(--white);
     font-weight: 800;
 }
 
@@ -28,10 +37,10 @@ h1 {
     text-align: center;
     font-size: 30px;
     margin: 0 auto 10px auto;
-    background-color: #6943FF;
-    color: #ffffff;
+    background-color: var(--purple);
+    color: var(--white);
     font-style: bold;
-    border: 1px solid #ffffff;
+    border: 1px solid var(--white);
     border-radius: 5px;
     min-width: 80px;
     max-width: 200px;
@@ -40,17 +49,17 @@ h1 {
 }
 
 #number-to-convert:hover {
-    background-color: #DE45AB;
+    background-color: var(--pink);
     transition: 0.5s;
-    outline-color: #F4F4F4;
+    outline-color: var(--grey);
 }
 
 #number-to-convert:focus {
-    background-color: #DE45AB;
+    background-color: var(--pink);
     transition: 0.5s;
     outline-color: transparent;
     outline-style: solid;
-    box-shadow: 0 0 0 2px #F4F4F4;
+    box-shadow: 0 0 0 2px var(--grey);
 }
 
 /* remove arrows for WebKit browsers */
@@ -69,8 +78,8 @@ input[type=number]{
 #convert-btn {
     margin-bottom: 15px;
     margin-top: 10px;
-    background-color: #ffffff;
-    color: #3D3D3D;
+    background-color: var(--white);
+    color: var(--black);
     border: none;
     border-radius: 3px;
     padding: 5px 15px;
@@ -79,14 +88,14 @@ input[type=number]{
 }
 
 #convert-btn:hover {
-    background-color: #DE45AB;
-    color: #ffffff;
+    background-color: var(--pink);
+    color: var(--white);
     transition: 0.5s;
 }
 
 #convert-btn:focus {
-    background-color: #DE45AB;
-    color: #ffffff;
+    background-color: var(--pink);
+    color: var(--white);
     transition: 0.5s;
     outline-color: transparent;
     outline-style: solid;
@@ -98,7 +107,7 @@ input[type=number]{
     display: flex;
     flex-direction: column;
     padding-top: 15px;
-    background: #F4F4F4;
+    background: var(--grey);
     height: 100vh;
 }
 
@@ -108,14 +117,13 @@ input[type=number]{
     width: 80%;
     margin: 8px auto;
     border-radius: 4px;
-    background: #ffffff;
+    background: var(--white);
     text-align: center;
 }
 
 .results h2 {
     font-size: 16px; 
     font-weight: 600;
-
 }
 
 .results p {
