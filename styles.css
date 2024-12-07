@@ -16,6 +16,8 @@ body {
     text-align: center;
 }
 
+/* Top Section Styles */
+
 /* styling the top section of the page */
 #top-screen {
     display: flex;
@@ -101,6 +103,8 @@ input[type=number]{
     outline-style: solid;
     box-shadow: 0 0 0 2px #F4F4F4;
 }
+
+/* Results Section Styles */
 
 /* styling the results container */
 #results-container {
