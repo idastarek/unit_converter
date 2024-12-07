@@ -28,7 +28,7 @@ h1 {
     text-align: center;
     font-size: 30px;
     margin: 0 auto 10px auto;
-    background: #6943FF;
+    background-color: #6943FF;
     color: #ffffff;
     font-style: bold;
     border: 1px solid #ffffff;
@@ -37,6 +37,20 @@ h1 {
     max-width: 200px;
     align-content: center;
     font-weight: 800;
+}
+
+#number-to-convert:hover {
+    background-color: #DE45AB;
+    transition: 0.5s;
+    outline-color: #F4F4F4;
+}
+
+#number-to-convert:focus {
+    background-color: #DE45AB;
+    transition: 0.5s;
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 2px #F4F4F4;
 }
 
 /* remove arrows for WebKit browsers */
@@ -55,13 +69,28 @@ input[type=number]{
 #convert-btn {
     margin-bottom: 15px;
     margin-top: 10px;
-    background: #ffffff;
+    background-color: #ffffff;
     color: #3D3D3D;
     border: none;
     border-radius: 3px;
     padding: 5px 15px;
     font-weight: 400;
-    padding: 8px 8px;
+    padding: 10px 20px;
+}
+
+#convert-btn:hover {
+    background-color: #DE45AB;
+    color: #ffffff;
+    transition: 0.5s;
+}
+
+#convert-btn:focus {
+    background-color: #DE45AB;
+    color: #ffffff;
+    transition: 0.5s;
+    outline-color: transparent;
+    outline-style: solid;
+    box-shadow: 0 0 0 2px #F4F4F4;
 }
 
 /* styling the results container */
