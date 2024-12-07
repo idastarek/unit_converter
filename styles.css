@@ -109,6 +109,7 @@ input[type=number]{
     margin: 8px auto;
     border-radius: 4px;
     background: #ffffff;
+    text-align: center;
 }
 
 .results h2 {
