@@ -32,6 +32,7 @@ h1 {
     padding-top: 15px;
     color: var(--white);
     font-weight: 800;
+    text-align: center;
 }
 
 /* styling the input field */
