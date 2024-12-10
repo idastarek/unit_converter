@@ -52,8 +52,8 @@ function inputToNumber() {
 
 // function to perform the conversion
 function performConversion(type) {
-    let result1 = `${numberToConvert} ${type.unit1} = ` + (numberToConvert/type.conversion).toFixed(2) + ` ${type.unit2}`;
-    let result2 = `${numberToConvert} ${type.unit2} = ` + (numberToConvert*type.conversion).toFixed(2) + ` ${type.unit1}`;
+    let result1 = `${numberToConvert} ${type.unit1} = ` + (numberToConvert*type.conversion).toFixed(2) + ` ${type.unit2}`;
+    let result2 = `${numberToConvert} ${type.unit2} = ` + (numberToConvert/type.conversion).toFixed(2) + ` ${type.unit1}`;
     let result = `${result1} | ${result2}`;
     
     return result
