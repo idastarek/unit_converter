@@ -6,16 +6,42 @@ const lengthContainer = document.getElementById("length");
 const volumeContainer = document.getElementById("volume");
 const massContainer = document.getElementById("mass");
 
+
+const metersFeet = {
+    name: "Length",
+    container: lengthContainer,
+    conversion: 3.281,
+    unit1: "meters",
+    unit2: "feet"
+}
+
+const litersGallons = {
+    name: "Volume",
+    container: volumeContainer,
+    conversion: 0.264,
+    unit1: "liters",
+    unit2: "gallons"
+}
+
+const kilogramsPounds = {
+    name: "Mass",
+    container: massContainer,
+    conversion: 2.204,
+    unit1: "kilograms",
+    unit2:  "pounds"
+}
+
 // adding event listener to the button
 convertBtn.addEventListener("click", function() {
     inputToNumber();
-    const lengthResult = performConversion("length");
-    const volumeResult = performConversion("volume");
-    const massResult = performConversion("mass");
+
+    const lengthResult = performConversion(metersFeet);
+    const volumeResult = performConversion(litersGallons);
+    const massResult = performConversion(kilogramsPounds);
     
-    displayResults(lengthContainer, lengthResult, "Length", "meter", "feet");
-    displayResults(volumeContainer, volumeResult, "Volume", "liters", "gallons");
-    displayResults(massContainer, massResult, "Mass", "kilograms", "pounds");
+    displayResults(metersFeet, lengthResult);
+    displayResults(litersGallons, volumeResult);
+    displayResults(kilogramsPounds, massResult);
 })
 
 // function to convert the input value to a number
@@ -26,33 +52,19 @@ function inputToNumber() {
 
 // function to perform the conversion
 function performConversion(type) {
-    let convertedNum1, convertedNum2, unit1, unit2;
-    if (type === "length") {
-        convertedNum1 = numberToConvert * 3.281;
-        convertedNum2 = numberToConvert / 3.281;
-        unit1 = "meters";
-        unit2 = "feet";
-
-    } else if (type === "volume") {
-       convertedNum1 = numberToConvert * 0.264;
-       convertedNum2 = numberToConvert / 0.264;
-       unit1 = "liters";
-       unit2 = "gallons";
-
-    } else {
-       convertedNum1 = numberToConvert * 2.204;
-       convertedNum2 = numberToConvert / 2.204;
-       unit1 = "kilograms";
-       unit2 = "pounds";
-    }
-    return `${numberToConvert} ${unit1} = ${convertedNum1.toFixed(2)} ${unit2} | ${numberToConvert} ${unit2} = ${convertedNum2.toFixed(2)} ${unit1}`;
+    let result1 = `${numberToConvert} ${type.unit1} = ` + (numberToConvert/type.conversion).toFixed(2) + ` ${type.unit2}`;
+    let result2 = `${numberToConvert} ${type.unit2} = ` + (numberToConvert*type.conversion).toFixed(2) + ` ${type.unit1}`;
+    let result = `${result1} | ${result2}`;
+    
+    return result
 }
 
 // function to display the results
-function displayResults(container, result, type, unit1, unit2) {
-    container.innerHTML = `
-            <h2>${type} (${unit1}/${unit2})</h2>
-            <p>${result}</p>
-            `
+function displayResults(type, result) {
+    type.container.innerHTML = `
+                <h2>${type.name} (${type.unit1}/${type.unit2})</h2>
+                <p>${result}</p> 
+    `
 }
+
 
